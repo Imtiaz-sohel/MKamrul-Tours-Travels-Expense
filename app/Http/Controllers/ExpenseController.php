@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ExpenseController extends Controller{
     function expenseList(){
-        return view('expense-list');
+      return view('expense-list',compact('expenses'));
     }
 
     function addExpenseList(){

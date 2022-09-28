@@ -40,13 +40,14 @@ active
               </tr>
             </thead>
             <tbody>
+                @foreach ($expenses as $expense)
                 <tr>
-                    <th scope="row">January</th>
+                    <th scope="row">abc</th>
                     <td>
                         <ul>
-                            <li>Utility Bill</li>
-                            <li>Total Salary</li>
-                            <li>Office Bill</li>
+                            <li>{{ $expenses }}</li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </td>
                     <td>
@@ -62,6 +63,7 @@ active
                         <a href="#" class="btn btn-outline-danger">Delete</a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
           </table>
         </div><!-- bd -->
