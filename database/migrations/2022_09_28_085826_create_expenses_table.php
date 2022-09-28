@@ -20,6 +20,7 @@ class CreateExpensesTable extends Migration
             $table->enum('expense',['Salary','Office-Rent','Water-Bill','Internet-Bill','Electricity-Bill','Entainment Cost','Office Cleaning Cost','Stationary Expenses','Fixed Asset Dimensions','Miscellaneous'])->nullable();
             $table->decimal('expense_amount',10,2)->default(00.00);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -21,6 +21,7 @@ class CreateIncomesTable extends Migration
             $table->decimal('selling_amount',10,2)->default(00.00);
             $table->double('profit_amount',10,2)->default(00.00);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

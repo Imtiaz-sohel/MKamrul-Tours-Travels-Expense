@@ -41,8 +41,8 @@
         </div>
       </a>
       <ul class="br-menu-sub nav flex-column">
-        <li class="nav-item"><a href="navigation.html" class="nav-link">All Incomes List</a></li>
-        <li class="nav-item"><a href="navigation-layouts.html" class="nav-link">Add Monthly Income</a></li>
+        <li class="nav-item"><a href="{{ route('IncomeList') }}" class="nav-link @yield('all_sub_active')">All Incomes List</a></li>
+        <li class="nav-item"><a href="{{ route('AddIncome') }}" class="nav-link @yield('add_sub_active')">Add Monthly Income</a></li>
       </ul>
       <a href="#" class="br-menu-link @yield('expense')">
         <div class="br-menu-item">
