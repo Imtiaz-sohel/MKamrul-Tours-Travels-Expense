@@ -16,7 +16,7 @@ active
       <h4 class="tx-gray-800 mg-b-5">All Income List</h4>
     </div>
     <div class="br-pagebody">
-        <a href="{{ route('AddIncome') }}" class="tx-18"> <i class="fa fa-plus"></i> Add Income</a>
+        <a style="color:#343a40; font-size:1.1rem; margin-left:20px" href="{{ route('AddIncome') }}" class="tx-18"><i class="fa fa-plus"></i> Add Income</a>
        <div class="br-section-wrapper">
         <div class="col-lg-6 mx-auto">
             @if (session('income_delete_message'))
