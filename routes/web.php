@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\IncomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/category-list',[CategoriesController::class,'categoryList'])->name('categoryList');
 
 Route::get('/', function () {
     return view('login');
@@ -32,3 +32,8 @@ Route::get('/edit-income/{income_id}',[IncomeController::class,'editIncome'])->n
 Route::get('/delete-income/{income_id}',[IncomeController::class,'deleteIncome'])->name('DeleteIncome');
 Route::post('/update-income/',[IncomeController::class,'updateIncomePost'])->name('updateIncomePost');
 Route::post('/add-income-post',[IncomeController::class,'addIncomePost'])->name('addIncomePost');
+// expence controller starts
+Route::get('/expense-list',[ExpenseController::class,'expenseList'])->name('allExpenseList');
+Route::get('/add-expense-list',[ExpenseController::class,'addExpenseList'])->name('addExpenseList');
+Route::post('/add-expense-list-post',[ExpenseController::class,'addExpenseListPost'])->name('addExpenseListPost');
+

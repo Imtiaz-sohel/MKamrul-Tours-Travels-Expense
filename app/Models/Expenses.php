@@ -10,4 +10,5 @@ class Expenses extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = ['current_month','expense_field','expense_amount'];
 }

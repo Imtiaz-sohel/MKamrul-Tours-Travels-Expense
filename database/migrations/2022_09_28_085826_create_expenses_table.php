@@ -17,7 +17,7 @@ class CreateExpensesTable extends Migration
         Schema::create('expenses', function (Blueprint $table) {
             $table->id();
             $table->string('current_month')->nullable();
-            $table->enum('expense',['Salary','Office-Rent','Water-Bill','Internet-Bill','Electricity-Bill','Entainment Cost','Office Cleaning Cost','Stationary Expenses','Fixed Asset Dimensions','Miscellaneous'])->nullable();
+            $table->string('expense_field')->nullable();
             $table->decimal('expense_amount',10,2)->default(00.00);
             $table->timestamps();
             $table->softDeletes();
