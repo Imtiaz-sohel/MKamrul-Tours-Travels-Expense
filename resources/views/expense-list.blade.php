@@ -34,7 +34,7 @@ active
     </nav>
   </div>
   <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
-    <h4 class="tx-gray-800 mg-b-5">All Expenses List</h4>
+    <h4 class="tx-gray-800 mg-b-5 text-center">All Expenses List</h4>
   </div>
   <div class="br-pagebody">
     <a style="color:#343a40; font-size:1.1rem; margin-left:20px" href="{{ route('addExpenseList') }}" class="tx-18"><i
@@ -70,7 +70,7 @@ active
           $total = 0;
           @endphp
           <tr>
-            <td class="bg-info text-white" colspan="5">{{ $key }}</td>
+            <td colspan="4" class="bg-info text-white tx-18 tx-bold" colspan="4">{{ $key }}</td>
           </tr>
           @foreach ($data as $keyExpense=> $expense)
           @php
@@ -79,8 +79,8 @@ active
           <tr>
             <td style="border-bottom: 0px;"></td>
             <td>{{ $expense->expense_field }}</td>
-            <td colspan="4">{{ $expense->expense_amount }}</td>
-            <td><a href="{{ route('expenseDelete', $expense->id) }}" class="btn btn-danger">Delete</a></td>
+            <td colspan="2">{{ $expense->expense_amount }}</td>
+            <td><a href="{{ route('expenseDelete', $expense->id) }}" class="btn-outline-danger">Delete</a></td>
           </tr>
           @endforeach
           <tr>
@@ -93,7 +93,7 @@ active
           @endphp
           @endforeach
           <tr>
-            <td colspan="2"><span class="g_total_style">Grand Total</span></td>
+            <td colspan="2"><span class="g_total_style">Grand Total EXpense</span></td>
             <td><span class="g_total_style">{{ $grandTotal }}.00</span></td>
           </tr>
         </table>

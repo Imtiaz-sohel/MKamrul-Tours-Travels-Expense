@@ -40,6 +40,6 @@ class ExpenseController extends Controller
   public function expenseDelete(Expenses $expense)
   {
     $expense->delete();
-    return back();
+    return back()->with('expense_delete_message','Expenses Deleted Successfully');
   }
 }
