@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BalanceController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\IncomeController;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +25,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
+Route::group(['prefix'=>'admin','middleware'=>['auth']],function(){
 // income controller starts
 Route::get('/all-income',[IncomeController::class,'incomeList'])->name('IncomeList');
 Route::get('/add-income',[IncomeController::class,'addIncome'])->name('AddIncome');
@@ -36,4 +37,6 @@ Route::post('/add-income-post',[IncomeController::class,'addIncomePost'])->name(
 Route::get('/expense-list',[ExpenseController::class,'expenseList'])->name('allExpenseList');
 Route::get('/add-expense-list',[ExpenseController::class,'addExpenseList'])->name('addExpenseList');
 Route::post('/add-expense-list-post',[ExpenseController::class,'addExpenseListPost'])->name('addExpenseListPost');
-
+// balance controller starts
+Route::get('/balance-list',[BalanceController::class,'allBalance'])->name('Balance');
+});

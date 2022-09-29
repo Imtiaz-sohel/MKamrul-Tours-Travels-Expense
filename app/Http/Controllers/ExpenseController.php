@@ -9,10 +9,9 @@ use Illuminate\Http\Request;
 
 class ExpenseController extends Controller{
     function expenseList(){
-        // $user_info = Expenses::get()->groupBy(function($val) {
-        //     return Carbon::parse($val->current_month)->format('F');
-        // });
-        // dd($user_info);
+        $user_info = Expenses::get()->groupBy(function($val) {
+            return Carbon::parse($val->current_month)->format('F');
+        });
         return view('expense-list', compact('user_info'));
     }
     function addExpenseList(){
@@ -35,23 +34,4 @@ class ExpenseController extends Controller{
         Expenses::create($data);
         return back()->with('expense_inset_message','Expense Inserted Successfully');
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
