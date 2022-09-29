@@ -26,6 +26,9 @@
         @endif
         </div>
         <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10 text-center mb-3">Add Monthy Income</h6>
+        <div class="img" style="text-align:center;margin-bottom:10px">
+            <img width="500" height="200px" src="{{ asset('assets/img/logo_3.png') }}" alt="">
+        </div>
         <form action="{{ route('addIncomePost') }}" method="POST">
          @csrf
           <div class="form-layout form-layout-1">

@@ -18,6 +18,9 @@ active
     <div class="br-pagebody">
         <a style="color:#343a40; font-size:1.1rem; margin-left:20px" href="{{ route('AddIncome') }}" class="tx-18"><i class="fa fa-plus"></i> Add Income</a>
        <div class="br-section-wrapper">
+        <div class="img" style="text-align:center; margin-bottom:10px">
+            <img width="500" height="200px" src="{{ asset('assets/img/logo_3.png') }}" alt="">
+        </div>
         <div class="col-lg-6 mx-auto">
             @if (session('income_delete_message'))
                 <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">

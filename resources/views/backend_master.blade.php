@@ -29,8 +29,8 @@
     <div class="br-sideleft-menu">
       <a href="index.html" class="br-menu-link @yield('dashboard')">
         <div class="br-menu-item">
-          <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
-          <span class="menu-item-label">Dashboard</span>
+            <i class="fa fa-balance-scale tx-22" aria-hidden="true"></i>
+          <span class="menu-item-label">Balance</span>
         </div>
       </a>
       <a href="#" class="br-menu-link @yield('income')">

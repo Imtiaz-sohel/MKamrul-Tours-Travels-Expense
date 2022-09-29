@@ -6,15 +6,16 @@ use App\Http\Controllers\Controller;
 use App\Models\Expenses;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ExpenseController extends Controller{
     function expenseList(){
         $user_info = Expenses::get()->groupBy(function($val) {
             return Carbon::parse($val->current_month)->format('F');
         });
+        dd($user_info);
         return view('expense-list', compact('user_info'));
     }
-
     function addExpenseList(){
         $allMonths = ['January','February','March','April','May','June','July','August','September','Octomber','November','December'];
         $allExpenses = ['Empoyee Salary','Office Rent','Water Bill','Internet Bill','Electricity Bill','Entainment Cost','Office Cleaning Cost','Stationary Expenses','Fixed Asset Diffenciation Cost','Miscellaneous'];
