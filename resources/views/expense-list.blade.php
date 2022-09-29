@@ -20,6 +20,11 @@ active
         font-weight: bolder;
         text-transform: uppercase;
     }
+    .month_style{
+        background: #091165;
+        color: #fff;
+        font-size: 18px;
+    }
 </style>
 <div class="br-mainpanel">
     <div class="br-pageheader pd-y-15 pd-l-20">
@@ -61,7 +66,7 @@ active
                     @php
                     $total = 0;
                     @endphp
-                    <tr class="bg-info text-white">
+                    <tr class="month_style">
                         <td colspan="5">{{  $key }}</td>
                         <td colspan="5"> <a href="#" class="btn btn-outline-danger text-white">Delete</a></td>
                     </tr>
