@@ -16,24 +16,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+  return view('login');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+  return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 // income controller starts
-Route::get('/all-income',[IncomeController::class,'incomeList'])->name('IncomeList');
-Route::get('/add-income',[IncomeController::class,'addIncome'])->name('AddIncome');
-Route::get('/edit-income/{income_id}',[IncomeController::class,'editIncome'])->name('EditIncome');
-Route::get('/delete-income/{income_id}',[IncomeController::class,'deleteIncome'])->name('DeleteIncome');
-Route::post('/update-income/',[IncomeController::class,'updateIncomePost'])->name('updateIncomePost');
-Route::post('/add-income-post',[IncomeController::class,'addIncomePost'])->name('addIncomePost');
+Route::get('/all-income', [IncomeController::class, 'incomeList'])->name('IncomeList');
+Route::get('/add-income', [IncomeController::class, 'addIncome'])->name('AddIncome');
+Route::get('/edit-income/{income_id}', [IncomeController::class, 'editIncome'])->name('EditIncome');
+Route::get('/delete-income/{income_id}', [IncomeController::class, 'deleteIncome'])->name('DeleteIncome');
+Route::post('/update-income/', [IncomeController::class, 'updateIncomePost'])->name('updateIncomePost');
+Route::post('/add-income-post', [IncomeController::class, 'addIncomePost'])->name('addIncomePost');
 // expence controller starts
-Route::get('/expense-list',[ExpenseController::class,'expenseList'])->name('allExpenseList');
-Route::get('/add-expense-list',[ExpenseController::class,'addExpenseList'])->name('addExpenseList');
-Route::post('/add-expense-list-post',[ExpenseController::class,'addExpenseListPost'])->name('addExpenseListPost');
-
+Route::get('/expense-list', [ExpenseController::class, 'expenseList'])->name('allExpenseList');
+Route::get('expense-delete/{expense}', [ExpenseController::class, 'expenseDelete'])->name('expenseDelete');
+Route::get('/add-expense-list', [ExpenseController::class, 'addExpenseList'])->name('addExpenseList');
+Route::post('/add-expense-list-post', [ExpenseController::class, 'addExpenseListPost'])->name('addExpenseListPost');
