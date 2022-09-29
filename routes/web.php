@@ -36,7 +36,7 @@ Route::post('/add-income-post', [IncomeController::class, 'addIncomePost'])->nam
 // expence controller starts
 Route::get('/expense-list',[ExpenseController::class,'expenseList'])->name('allExpenseList');
 Route::get('/add-expense-list',[ExpenseController::class,'addExpenseList'])->name('addExpenseList');
-Route::get('/delete-expense-list',[ExpenseController::class,'expenseDelete'])->name('expenseDelete');
+Route::get('/delete-expense-list/{id}',[ExpenseController::class,'expenseDelete'])->name('expenseDelete');
 Route::post('/add-expense-list-post',[ExpenseController::class,'addExpenseListPost'])->name('addExpenseListPost');
 // balance controller starts
 Route::get('/balance-list',[BalanceController::class,'allBalance'])->name('Balance');

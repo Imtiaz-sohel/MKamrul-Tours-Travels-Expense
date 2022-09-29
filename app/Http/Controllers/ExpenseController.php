@@ -37,9 +37,8 @@ class ExpenseController extends Controller
     return back()->with('expense_inset_message', 'Expense Inserted Successfully');
   }
 
-  public function expenseDelete(Expenses $expense)
-  {
-    $expense->delete();
+  public function expenseDelete($id){
+    Expenses::findOrFail($id)->delete();
     return back()->with('expense_delete_message','Expenses Deleted Successfully');
   }
 }
