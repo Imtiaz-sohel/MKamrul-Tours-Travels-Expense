@@ -59,7 +59,7 @@ active
             <th>Month</th>
             <th>Field Of Expense</th>
             <th>Expense Amount</th>
-            <th>Action</th>
+            <th class="text-center">Action</th>
           </tr>
           @php
           $grandTotal = 0;
@@ -70,7 +70,7 @@ active
           $total = 0;
           @endphp
           <tr>
-            <td colspan="4">{{ $key }}</td>
+            <td class="bg-info text-white" colspan="5">{{ $key }}</td>
           </tr>
           @foreach ($data as $keyExpense=> $expense)
           @php

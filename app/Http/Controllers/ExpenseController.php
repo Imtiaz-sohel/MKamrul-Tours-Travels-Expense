@@ -11,7 +11,7 @@ class ExpenseController extends Controller
 {
   function expenseList()
   {
-    $expense = Expenses::get()->groupBy('current_month');
+    $expense = Expenses::orderBy('created_at','ASC')->get()->groupBy('current_month');
     return view('expense-list', compact('expense'));
   }
   function addExpenseList()
