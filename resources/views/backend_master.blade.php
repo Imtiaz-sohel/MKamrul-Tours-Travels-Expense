@@ -26,12 +26,12 @@
   <div class="br-logo tx-16"><a href=""><span>[</span>M Kamrul Tours & Travels<span>]</span></a></div>
   <div class="br-sideleft overflow-y-auto">
     <label class="sidebar-label pd-x-15 mg-t-20">Navigation</label>
-    <div class="br-sideleft-menu">
+     {{-- <div  class="br-sideleft-menu">
       <a href="{{ route('Balance') }}" class="br-menu-link @yield('dashboard')">
         <div class="br-menu-item">
             <i class="fa fa-balance-scale tx-22" aria-hidden="true"></i>
           <span class="menu-item-label">Balance</span>
-        </div>
+      </div> --}}
       </a>
       <a href="#" class="br-menu-link @yield('income')">
         <div class="br-menu-item">
